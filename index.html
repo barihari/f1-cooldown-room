@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A lightweight Formula One standings menu interaction prototype."
+    />
+    <title>F1 Cooldown Room</title>
+    <link rel="stylesheet" href="styles.css?v=55" />
+    <script src="drivers.js?v=5" defer></script>
+    <script src="script.js?v=11" defer></script>
+  </head>
+  <body>
+    <aside class="viewport-notice" role="status">
+      <p>This experience requires a viewport of at least 900px.</p>
+    </aside>
+
+    <header class="standings-nav">
+      <nav class="standings-nav__inner" aria-label="Formula One standings">
+        <button
+          class="standings-nav__item"
+          type="button"
+          data-position="P1"
+          data-driver-slot="0"
+          aria-controls="driver-panel"
+          aria-expanded="false"
+          aria-label="First place"
+        >
+          <span class="standings-nav__rank" aria-hidden="true">
+            <span>1</span>
+            <span class="standings-nav__rank-suffix">ST</span>
+          </span>
+        </button>
+        <button
+          class="standings-nav__item"
+          type="button"
+          data-position="P2"
+          data-driver-slot="1"
+          aria-controls="driver-panel"
+          aria-expanded="false"
+          aria-label="Second place"
+        >
+          <span class="standings-nav__rank" aria-hidden="true">
+            <span>2</span>
+            <span class="standings-nav__rank-suffix">ND</span>
+          </span>
+        </button>
+        <button
+          class="standings-nav__item"
+          type="button"
+          data-position="P3"
+          data-driver-slot="2"
+          aria-controls="driver-panel"
+          aria-expanded="false"
+          aria-label="Third place"
+        >
+          <span class="standings-nav__rank" aria-hidden="true">
+            <span>3</span>
+            <span class="standings-nav__rank-suffix">RD</span>
+          </span>
+        </button>
+        <button
+          class="standings-nav__item"
+          type="button"
+          data-standings-panel="Drivers"
+          aria-controls="driver-panel"
+          aria-expanded="false"
+          aria-label="Drivers' Standings"
+        >
+          <span class="standings-nav__category">Drivers<br />Standings</span>
+        </button>
+        <button
+          class="standings-nav__item"
+          type="button"
+          data-standings-panel="Constructors"
+          aria-controls="driver-panel"
+          aria-expanded="false"
+          aria-label="Constructors' Standings"
+        >
+          <span class="standings-nav__category"
+            >Constructors<br />Standings</span
+          >
+        </button>
+      </nav>
+    </header>
+
+    <main class="split-stage">
+      <section
+        class="page-half page-half--left"
+        aria-label="Moët &amp; Chandon title"
+      >
+        <div class="hero">
+          <div class="hero__location">
+            <img
+              class="hero__f1-mark"
+              src="assets/f1-mark.svg"
+              alt="Formula One"
+            />
+            <p class="hero__track">Madrid</p>
+          </div>
+          <h1 class="hero__title">
+            <img
+              class="hero__wordmark"
+              src="assets/moet-chandon-wordmark.svg"
+              alt="Moët &amp; Chandon"
+            />
+          </h1>
+          <p class="hero__date">Sept. 11-13. 2026.</p>
+        </div>
+      </section>
+
+      <section class="page-half page-half--right" aria-hidden="true">
+        <div class="hero">
+          <div class="hero__location">
+            <img class="hero__f1-mark" src="assets/f1-mark.svg" alt="" />
+            <p class="hero__track">Madrid</p>
+          </div>
+          <div class="hero__title">
+            <img
+              class="hero__wordmark"
+              src="assets/moet-chandon-wordmark.svg"
+              alt=""
+            />
+          </div>
+          <p class="hero__date">Sept. 11-13. 2026.</p>
+        </div>
+      </section>
+    </main>
+
+    <aside class="driver-panel" id="driver-panel" aria-hidden="true">
+      <div class="driver-panel__inner">
+        <h2 class="driver-panel__name">
+          <span class="driver-panel__first-name" id="driver-first-name"></span>
+          <span class="driver-panel__last-name" id="driver-last-name"></span>
+        </h2>
+        <div class="driver-panel__meta" id="driver-meta" hidden>
+          <span class="driver-panel__country">
+            <img
+              class="driver-panel__flag"
+              id="driver-flag"
+              src="assets/flags/it.svg"
+              alt=""
+            />
+            <span id="driver-country"></span>
+          </span>
+          <span id="driver-team"></span>
+          <span id="driver-number"></span>
+        </div>
+        <section
+          class="driver-panel__standings"
+          id="driver-standings"
+          aria-label="Top ten drivers"
+          hidden
+        >
+          <ol
+            class="driver-panel__standings-list"
+            id="driver-standings-list"
+          ></ol>
+        </section>
+      </div>
+    </aside>
+  </body>
+</html>
