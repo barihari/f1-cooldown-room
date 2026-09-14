@@ -12,8 +12,16 @@ const panelStandings = document.querySelector("#driver-standings");
 const panelStandingsList = document.querySelector("#driver-standings-list");
 const standingButtons = [...document.querySelectorAll(".standings-nav__item")];
 const driverButtons = [...document.querySelectorAll("[data-driver-slot]")];
-const { drivers, teams, podium, driverStandings, constructorStandings } =
-  window.F1_2026;
+const trackNames = [...document.querySelectorAll(".hero__track")];
+const eventDates = [...document.querySelectorAll(".hero__date")];
+const { drivers, teams } = window.F1_2026;
+const {
+  podium,
+  driverStandings,
+  constructorStandings,
+  location: eventLocation,
+  dateLabel,
+} = window.F1_CURRENT_EVENT;
 const transitionDuration = Number.parseFloat(
   getComputedStyle(root).getPropertyValue("--transition-duration"),
 );
@@ -21,6 +29,51 @@ const transitionDuration = Number.parseFloat(
 let activeButton = null;
 let phase = "closed";
 let transitionTimer = null;
+
+function renderEventIdentity() {
+  trackNames.forEach((trackName) => {
+    trackName.textContent = eventLocation;
+  });
+  eventDates.forEach((eventDate) => {
+    eventDate.textContent = dateLabel;
+  });
+}
+
+function fitTrackNames() {
+  document.querySelectorAll(".hero__location").forEach((locationGroup) => {
+    const trackName = locationGroup.querySelector(".hero__track");
+    const mark = locationGroup.querySelector(".hero__f1-mark");
+
+    trackName.style.removeProperty("--track-scale");
+
+    const styles = getComputedStyle(locationGroup);
+    const gap = Number.parseFloat(styles.columnGap || styles.gap) || 0;
+    const availableWidth = Math.max(
+      1,
+      locationGroup.clientWidth - mark.getBoundingClientRect().width - gap,
+    );
+    const naturalWidth = trackName.scrollWidth;
+    const scale = Math.min(1, availableWidth / naturalWidth);
+
+    trackName.style.setProperty("--track-scale", scale.toFixed(4));
+  });
+}
+
+function fitDriverName() {
+  panelFirstName.parentElement.style.removeProperty("--driver-name-scale");
+
+  const availableWidth = panelFirstName.parentElement.clientWidth;
+  const naturalWidth = Math.max(
+    panelFirstName.scrollWidth,
+    panelLastName.scrollWidth,
+  );
+  const scale = Math.min(1, availableWidth / naturalWidth);
+
+  panelFirstName.parentElement.style.setProperty(
+    "--driver-name-scale",
+    scale.toFixed(4),
+  );
+}
 
 function renderStandings(entries, getName) {
   const rows = entries.map((entry, index) => {
@@ -77,6 +130,7 @@ function showDriver(driverId) {
   delete panel.dataset.panelMode;
   panel.style.setProperty("--team-color", team.color);
   panel.style.setProperty("--team-surface", team.surface);
+  fitDriverName();
 }
 
 function showStandings(title) {
@@ -136,7 +190,10 @@ function assignPodium(driverIds) {
   if (activeButton) showPanel(activeButton);
 }
 
+renderEventIdentity();
 assignPodium(podium);
+fitTrackNames();
+document.fonts?.ready.then(fitTrackNames);
 
 function positionSplitAt(button) {
   const buttonRect = button.getBoundingClientRect();
@@ -231,6 +288,8 @@ document.addEventListener("keydown", (event) => {
 });
 
 window.addEventListener("resize", () => {
+  fitTrackNames();
+  if (activeButton?.dataset.driver) fitDriverName();
   if (activeButton) positionSplitAt(activeButton);
 });
 

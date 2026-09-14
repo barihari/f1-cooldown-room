@@ -1,0 +1,45 @@
+name: Update latest Grand Prix data
+
+on:
+  schedule:
+    - cron: "17 10 * * 0,1"
+      timezone: "America/New_York"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-latest-grand-prix
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the production branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Retrieve the latest completed Grand Prix
+        run: node scripts/update-race-data.mjs
+
+      - name: Validate the generated data
+        run: node scripts/validate-race-data.mjs
+
+      - name: Commit a genuine data change
+        run: |
+          if git diff --quiet -- data/2026-races.json data/current-event.json data/current-event.js; then
+            echo "Race data is already current."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/2026-races.json data/current-event.json data/current-event.js
+          git commit -m "Update latest Grand Prix data"
+          git push

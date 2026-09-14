@@ -255,6 +255,7 @@ body.is-open .page-half--right {
 
 .hero__location {
   display: flex;
+  width: min(70vw, 980px);
   margin: 0 0 clamp(6px, 1vw, 16px);
   align-items: center;
   justify-content: center;
@@ -270,10 +271,13 @@ body.is-open .page-half--right {
 }
 
 .hero__track {
+  --track-scale: 1;
+
   margin: 0;
   color: var(--champagne);
   font-family: "Northwell", cursive;
-  font-size: clamp(77px, 9.6vw, 154px);
+  font-size: calc(clamp(77px, 9.6vw, 154px) * var(--track-scale));
+  flex: none;
   font-weight: 400;
   line-height: 0.8;
   white-space: nowrap;
@@ -344,6 +348,8 @@ body.is-transitioning .standings-nav__item {
 }
 
 .driver-panel__name {
+  --driver-name-scale: 1;
+
   display: flex;
   width: 100%;
   margin: 0;
@@ -352,7 +358,9 @@ body.is-transitioning .standings-nav__item {
   justify-content: center;
   gap: 0.04em;
   font-family: "Formula1 Display", sans-serif;
-  font-size: clamp(26px, 2.35vw, 38px);
+  font-size: calc(
+    clamp(26px, 2.35vw, 38px) * var(--driver-name-scale)
+  );
   letter-spacing: -0.025em;
   line-height: 0.95;
   text-align: center;

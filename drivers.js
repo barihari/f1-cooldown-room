@@ -1,6 +1,6 @@
 /*
  * 2026 roster and profile styling sampled from formula1.com/en/drivers on
- * 2026-09-14. Change only `podium` when the displayed podium changes.
+ * 2026-09-14. Race-specific data lives in data/current-event.js.
  */
 (function exposeF1DriverIndex() {
   const teams = {
@@ -240,43 +240,11 @@
     },
   };
 
-  const driverStandings = [
-    { driver: "kimi-antonelli", points: 292 },
-    { driver: "george-russell", points: 211 },
-    { driver: "lewis-hamilton", points: 191 },
-    { driver: "lando-norris", points: 186 },
-    { driver: "charles-leclerc", points: 167 },
-    { driver: "max-verstappen", points: 145 },
-    { driver: "oscar-piastri", points: 120 },
-    { driver: "isack-hadjar", points: 71 },
-    { driver: "liam-lawson", points: 59 },
-    { driver: "pierre-gasly", points: 41 },
-  ];
-
-  const constructorStandings = [
-    { team: "mercedes", points: 503 },
-    { team: "ferrari", points: 358 },
-    { team: "mclaren", points: 306 },
-    { team: "redBullRacing", points: 230 },
-    { team: "racingBulls", points: 77 },
-    { team: "alpine", points: 68 },
-    { team: "haas", points: 21 },
-    { team: "audi", points: 17 },
-    { team: "williams", points: 11 },
-    { team: "astonMartin", points: 3 },
-    { team: "cadillac", points: 0 },
-  ];
-
   Object.values(teams).forEach(Object.freeze);
   Object.values(drivers).forEach(Object.freeze);
-  driverStandings.forEach(Object.freeze);
-  constructorStandings.forEach(Object.freeze);
 
   window.F1_2026 = Object.freeze({
     teams: Object.freeze(teams),
     drivers: Object.freeze(drivers),
-    driverStandings: Object.freeze(driverStandings),
-    constructorStandings: Object.freeze(constructorStandings),
-    podium: Object.freeze(["kimi-antonelli", "max-verstappen", "lando-norris"]),
   });
 })();
