@@ -1,26 +1,26 @@
 (function exposeCurrentEvent() {
   const currentEvent = {
     "season": 2026,
-    "round": 14,
-    "location": "Madrid",
-    "dateLabel": "Sept. 11-13. 2026.",
+    "round": 15,
+    "location": "Azerbaijan",
+    "dateLabel": "Sept. 24-26. 2026.",
     "podium": [
-      "kimi-antonelli",
+      "george-russell",
       "max-verstappen",
-      "lando-norris"
+      "isack-hadjar"
     ],
     "driverStandings": [
       {
         "driver": "kimi-antonelli",
-        "points": 292
+        "points": 302
       },
       {
         "driver": "george-russell",
-        "points": 211
+        "points": 236
       },
       {
         "driver": "lewis-hamilton",
-        "points": 191
+        "points": 199
       },
       {
         "driver": "lando-norris",
@@ -28,11 +28,11 @@
       },
       {
         "driver": "charles-leclerc",
-        "points": 167
+        "points": 179
       },
       {
         "driver": "max-verstappen",
-        "points": 145
+        "points": 163
       },
       {
         "driver": "oscar-piastri",
@@ -40,7 +40,7 @@
       },
       {
         "driver": "isack-hadjar",
-        "points": 71
+        "points": 86
       },
       {
         "driver": "liam-lawson",
@@ -54,11 +54,11 @@
     "constructorStandings": [
       {
         "team": "mercedes",
-        "points": 503
+        "points": 538
       },
       {
         "team": "ferrari",
-        "points": 358
+        "points": 378
       },
       {
         "team": "mclaren",
@@ -66,11 +66,11 @@
       },
       {
         "team": "redBullRacing",
-        "points": 230
+        "points": 263
       },
       {
         "team": "racingBulls",
-        "points": 77
+        "points": 83
       },
       {
         "team": "alpine",
@@ -78,7 +78,7 @@
       },
       {
         "team": "haas",
-        "points": 21
+        "points": 27
       },
       {
         "team": "audi",
@@ -86,7 +86,7 @@
       },
       {
         "team": "williams",
-        "points": 11
+        "points": 12
       },
       {
         "team": "astonMartin",
