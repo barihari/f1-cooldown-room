@@ -1,18 +1,18 @@
 (function exposeCurrentEvent() {
   const currentEvent = {
     "season": 2026,
-    "round": 15,
-    "location": "Azerbaijan",
-    "dateLabel": "Sept. 24-26. 2026.",
+    "round": 16,
+    "location": "Bahrain",
+    "dateLabel": "Oct. 2-4. 2026.",
     "podium": [
-      "george-russell",
       "max-verstappen",
-      "isack-hadjar"
+      "kimi-antonelli",
+      "lewis-hamilton"
     ],
     "driverStandings": [
       {
         "driver": "kimi-antonelli",
-        "points": 302
+        "points": 320
       },
       {
         "driver": "george-russell",
@@ -20,31 +20,31 @@
       },
       {
         "driver": "lewis-hamilton",
-        "points": 199
-      },
-      {
-        "driver": "lando-norris",
-        "points": 186
+        "points": 214
       },
       {
         "driver": "charles-leclerc",
-        "points": 179
+        "points": 191
+      },
+      {
+        "driver": "lando-norris",
+        "points": 188
       },
       {
         "driver": "max-verstappen",
-        "points": 163
+        "points": 188
       },
       {
         "driver": "oscar-piastri",
-        "points": 120
+        "points": 128
       },
       {
         "driver": "isack-hadjar",
-        "points": 86
+        "points": 96
       },
       {
         "driver": "liam-lawson",
-        "points": 59
+        "points": 65
       },
       {
         "driver": "pierre-gasly",
@@ -54,23 +54,23 @@
     "constructorStandings": [
       {
         "team": "mercedes",
-        "points": 538
+        "points": 556
       },
       {
         "team": "ferrari",
-        "points": 378
+        "points": 405
       },
       {
         "team": "mclaren",
-        "points": 306
+        "points": 316
       },
       {
         "team": "redBullRacing",
-        "points": 263
+        "points": 298
       },
       {
         "team": "racingBulls",
-        "points": 83
+        "points": 90
       },
       {
         "team": "alpine",
@@ -90,7 +90,7 @@
       },
       {
         "team": "astonMartin",
-        "points": 3
+        "points": 7
       },
       {
         "team": "cadillac",

@@ -204,7 +204,11 @@
       "startDate": "2026-10-02",
       "endDate": "2026-10-04",
       "dateLabel": "Oct. 2-4. 2026.",
-      "podium": null
+      "podium": [
+        "max-verstappen",
+        "kimi-antonelli",
+        "lewis-hamilton"
+      ]
     },
     {
       "round": 17,
