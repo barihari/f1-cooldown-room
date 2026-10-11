@@ -217,7 +217,11 @@
       "startDate": "2026-10-09",
       "endDate": "2026-10-11",
       "dateLabel": "Oct. 9-11. 2026.",
-      "podium": null
+      "podium": [
+        "max-verstappen",
+        "charles-leclerc",
+        "kimi-antonelli"
+      ]
     },
     {
       "round": 18,

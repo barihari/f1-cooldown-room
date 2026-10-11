@@ -1,49 +1,49 @@
 {
   "season": 2026,
-  "round": 16,
-  "location": "Bahrain",
-  "dateLabel": "Oct. 2-4. 2026.",
+  "round": 17,
+  "location": "Singapore",
+  "dateLabel": "Oct. 9-11. 2026.",
   "podium": [
     "max-verstappen",
-    "kimi-antonelli",
-    "lewis-hamilton"
+    "charles-leclerc",
+    "kimi-antonelli"
   ],
   "driverStandings": [
     {
       "driver": "kimi-antonelli",
-      "points": 320
+      "points": 340
     },
     {
       "driver": "george-russell",
-      "points": 236
+      "points": 238
     },
     {
       "driver": "lewis-hamilton",
-      "points": 214
-    },
-    {
-      "driver": "charles-leclerc",
-      "points": 191
-    },
-    {
-      "driver": "lando-norris",
-      "points": 188
+      "points": 229
     },
     {
       "driver": "max-verstappen",
-      "points": 188
+      "points": 221
+    },
+    {
+      "driver": "charles-leclerc",
+      "points": 215
+    },
+    {
+      "driver": "lando-norris",
+      "points": 201
     },
     {
       "driver": "oscar-piastri",
-      "points": 128
+      "points": 138
     },
     {
       "driver": "isack-hadjar",
-      "points": 96
+      "points": 97
     },
     {
       "driver": "liam-lawson",
-      "points": 65
+      "points": 75
     },
     {
       "driver": "pierre-gasly",
@@ -53,23 +53,23 @@
   "constructorStandings": [
     {
       "team": "mercedes",
-      "points": 556
+      "points": 578
     },
     {
       "team": "ferrari",
-      "points": 405
+      "points": 444
     },
     {
       "team": "mclaren",
-      "points": 316
+      "points": 339
     },
     {
       "team": "redBullRacing",
-      "points": 298
+      "points": 332
     },
     {
       "team": "racingBulls",
-      "points": 90
+      "points": 100
     },
     {
       "team": "alpine",
@@ -77,11 +77,11 @@
     },
     {
       "team": "haas",
-      "points": 27
+      "points": 30
     },
     {
       "team": "audi",
-      "points": 17
+      "points": 23
     },
     {
       "team": "williams",
