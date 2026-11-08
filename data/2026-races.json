@@ -256,7 +256,11 @@
       "startDate": "2026-11-06",
       "endDate": "2026-11-08",
       "dateLabel": "Nov. 6-8. 2026.",
-      "podium": null
+      "podium": [
+        "lando-norris",
+        "max-verstappen",
+        "isack-hadjar"
+      ]
     },
     {
       "round": 21,

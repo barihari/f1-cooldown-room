@@ -1,50 +1,50 @@
 (function exposeCurrentEvent() {
   const currentEvent = {
     "season": 2026,
-    "round": 19,
-    "location": "Mexico",
-    "dateLabel": "Oct. 30-Nov. 1. 2026.",
+    "round": 20,
+    "location": "Brazil",
+    "dateLabel": "Nov. 6-8. 2026.",
     "podium": [
+      "lando-norris",
       "max-verstappen",
-      "lewis-hamilton",
-      "kimi-antonelli"
+      "isack-hadjar"
     ],
     "driverStandings": [
       {
         "driver": "kimi-antonelli",
-        "points": 380
+        "points": 390
       },
       {
         "driver": "max-verstappen",
-        "points": 261
-      },
-      {
-        "driver": "lewis-hamilton",
-        "points": 259
+        "points": 279
       },
       {
         "driver": "george-russell",
-        "points": 250
+        "points": 262
+      },
+      {
+        "driver": "lewis-hamilton",
+        "points": 261
       },
       {
         "driver": "charles-leclerc",
-        "points": 245
+        "points": 251
       },
       {
         "driver": "lando-norris",
-        "points": 221
+        "points": 246
       },
       {
         "driver": "oscar-piastri",
-        "points": 144
+        "points": 152
       },
       {
         "driver": "isack-hadjar",
-        "points": 107
+        "points": 122
       },
       {
         "driver": "liam-lawson",
-        "points": 83
+        "points": 87
       },
       {
         "driver": "pierre-gasly",
@@ -54,23 +54,23 @@
     "constructorStandings": [
       {
         "team": "mercedes",
-        "points": 630
+        "points": 652
       },
       {
         "team": "ferrari",
-        "points": 504
+        "points": 512
       },
       {
         "team": "redBullRacing",
-        "points": 382
+        "points": 415
       },
       {
         "team": "mclaren",
-        "points": 365
+        "points": 398
       },
       {
         "team": "racingBulls",
-        "points": 108
+        "points": 112
       },
       {
         "team": "alpine",
@@ -82,7 +82,7 @@
       },
       {
         "team": "audi",
-        "points": 27
+        "points": 28
       },
       {
         "team": "williams",
