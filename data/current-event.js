@@ -28,7 +28,7 @@
       },
       {
         "driver": "charles-leclerc",
-        "points": 251
+        "points": 249
       },
       {
         "driver": "lando-norris",
@@ -44,7 +44,7 @@
       },
       {
         "driver": "liam-lawson",
-        "points": 87
+        "points": 89
       },
       {
         "driver": "pierre-gasly",
@@ -58,7 +58,7 @@
       },
       {
         "team": "ferrari",
-        "points": 512
+        "points": 510
       },
       {
         "team": "redBullRacing",
@@ -70,7 +70,7 @@
       },
       {
         "team": "racingBulls",
-        "points": 112
+        "points": 114
       },
       {
         "team": "alpine",
